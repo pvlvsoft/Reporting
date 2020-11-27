@@ -18,7 +18,9 @@ import java.time.LocalDate;
  * of methods overridden by it's descendants.</p>
  *
  *
- * <p></p>
+ * <p>Instances implementing this interface are provided with a few methods
+ * meant to be used as a general interface. These are the most general reports
+ * with the most general usage.</p>
  *
  * @author Vojtech Pavlu
  * @version 2020-11-27

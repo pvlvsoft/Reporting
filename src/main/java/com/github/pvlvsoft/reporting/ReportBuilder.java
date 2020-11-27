@@ -15,7 +15,9 @@ package com.github.pvlvsoft.reporting;
  * of methods overridden by it's descendants.</p>
  *
  *
- * <p></p>
+ * <p>The factory class for {@link Report} instances. The {@link ReportBuilder}
+ * instance is responsible for the {@link Report} creation initiation and it should
+ * be <i>Event-driven</i>.</p>
  *
  * @author Vojtech Pavlu
  * @version 2020-11-27
