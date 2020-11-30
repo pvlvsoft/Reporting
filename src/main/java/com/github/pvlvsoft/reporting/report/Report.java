@@ -1,7 +1,7 @@
-package com.github.pvlvsoft.reporting;
+package com.github.pvlvsoft.reporting.report;
 
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 /**
@@ -31,17 +31,28 @@ public interface Report {
     /**
      * <p>This method allows getting date of creation of the report.</p>
      *
-     * @return  {@link LocalDate} instance representing when the instance
+     * @return  {@link LocalDateTime} instance representing when the instance
      *          was created.
      */
-    public LocalDate getDateOfCreation();
+    public LocalDateTime getDateOfCreation();
 
 
     /**
      * <p>This method is responsible for the {@link Report} description.</p>
      *
-     * @return  {@link String}-formed description of the report. What instances of this
-     *          report class gives reports about.
+     * @return  {@link String}-formed description of the report.
+     *          What instances of this report class gives
+     *          reports about.
      */
     public String getReportDescription();
+
+
+    /**
+     * <p>This method returns the result of the report.</p>
+     *
+     * @return  {@link ReportResult} instance representing
+     *          the results of the report in the time of
+     *          it's creation
+     */
+    public ReportResult getReportResult();
 }

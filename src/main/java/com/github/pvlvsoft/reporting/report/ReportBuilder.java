@@ -1,4 +1,9 @@
-package com.github.pvlvsoft.reporting;
+package com.github.pvlvsoft.reporting.report;
+
+
+import com.github.pvlvsoft.reporting.persistence.ReportPersistor;
+
+import java.util.List;
 
 
 /**
@@ -20,14 +25,18 @@ package com.github.pvlvsoft.reporting;
  * be <i>Event-driven</i>.</p>
  *
  * @author Vojtech Pavlu
- * @version 2020-11-27
+ * @version 2020-11-30
  */
 public interface ReportBuilder {
 
     /**
      * <p>This {@link ReportBuilder} method is responsible for the {@link Report} creation.</p>
      *
+     * <p>This method is kind of <i>Observer</i> design pattern implementation. Observer is
+     * the {@link ReportPersistor} (the list of them), while {@code this} is the <i>publisher</i>.</p>
+     *
      * @return  the newly created {@link Report}.
      */
     public Report build();
+
 }
